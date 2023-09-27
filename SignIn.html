@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In Page</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(http://hdwpro.com/wp-content/uploads/2017/01/Natural-Full-HD-Background.jpg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .main {
+        width: 40%;
+        height: auto;
+        border-style: inset;
+        border-radius: 20px;
+        color: white;
+        padding: 30px 40px;
+        background-color: transparent;
+        backdrop-filter: blur(20px);
+      }
+      h1 {
+        text-align: center;
+        color: rgb(239, 232, 232);
+        text-shadow: #ff00bf 1px 0 10px;
+      }
+      .input-box {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 20px 0;
+      }
+
+      .input-box input {
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 20px;
+        padding-left: 20px;
+      }
+      .input-box input::placeholder {
+        color: rgb(18, 14, 14);
+        font-size: larger;
+        padding: 20px;
+      }
+
+      .btnSign {
+        width: 90%;
+        height: 40px;
+        margin: 25px;
+        border-style: outset;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 1.3rem;
+        text-shadow: #ff00bf 1px 0 10px;
+      }
+
+      @media all and (min-width: 320px) and (max-width: 520px) {
+        .main {
+          display: flex;
+          flex-direction: column;
+          width: auto;
+          height: auto;
+        }
+        .input-box {
+          width: 100%;
+          height: 50px;
+          margin: 30px 0;
+        }
+        .remember {
+          display: flex;
+          justify-content: space-between;
+          margin: 10px;
+        }
+        .btnSign {
+          width: 90%;
+          height: 40px;
+          margin: 15px;
+          border-style: outset;
+          border-radius: 10px;
+          cursor: pointer;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Sign In</h1>
+      <form>
+        <div class="input-box">
+          <label for="name">Enter name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name here"
+          />
+        </div>
+        <br />
+        <div class="input-box">
+          <label for="email">Enter email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            placeholder="Enter your email here"
+          />
+        </div>
+        <br />
+        <div class="input-box">
+          <label for="password">Enter password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            required
+            placeholder="Enter your password here"
+          />
+        </div>
+        <br />
+        <input class="btnSign" type="submit" value="SignIn" />
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+  let form = document.querySelector("form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let userName = document.getElementById("name").value;
+    let userPassword = document.getElementById("password").value;
+    let userEmail = document.getElementById("email").value;
+
+    localStorage.setItem("name", userName);
+    localStorage.setItem("email", userEmail);
+    localStorage.setItem("password", userPassword);
+
+    window.location.href = "/index.html";
+  });
+</script>

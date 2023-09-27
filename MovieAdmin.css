@@ -1,0 +1,144 @@
+.Omdb {
+    text-align: center;
+    font-size: 1.9rem;
+    font-family: monospace;
+    background-color: aqua;
+    border-radius: 0.6rem;
+    width: 30%;
+    margin: 3rem auto;
+    padding: 0.8rem 1rem;
+  }
+  .Omdb:hover {
+    cursor: pointer;
+    transform: rotateX(360deg);
+    transition: all 1s ease-in;
+  }
+  .card {
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
+  }
+  .card:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in;
+  }
+  #container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    gap: 3rem;
+  }
+  .imgSrc {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
+  .title,
+  .Id,
+  .year,
+  .type {
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .search {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    padding: 1.4rem;
+    border-radius: 1rem;
+    background-color: rgb(7, 7, 7);
+  }
+  .inputOne {
+    border-radius: 1rem;
+    padding: 8px 15px;
+    font-family: monospace;
+  }
+  .btn {
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 1rem;
+    color: rgb(1, 4, 8);
+    background-color: aqua;
+    padding: 0.8rem;
+    border: none;
+    margin: 0 2.5rem;
+  }
+  .btn:hover {
+    cursor: pointer;
+  }
+  .notFound {
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: monospace;
+    font-weight: 600;
+    margin-left: 35rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 30%;
+  }
+  .details {
+    border-radius: 1rem;
+    width: 50%;
+    margin: 1rem auto;
+    padding: 0.4rem;
+    border: none;
+    color: rgb(1, 5, 9);
+    background-color: aqua;
+  }
+  
+  .details:hover {
+    cursor: pointer;
+  }
+  .inp1 {
+    width: 35%;
+    margin-left: 14rem;
+  }
+  .btn1 {
+    width: 20%;
+  }
+  .btnAuthanticate {
+    font-size: 1.2rem;
+    font-family: monospace;
+    border-radius: 1rem;
+    border: none;
+    padding: 0.6rem;
+    background-color: aqua;
+  }
+  .btnAuthanticate:hover {
+    cursor: pointer;
+  }
+  .imageMovie {
+    max-width: 7%;
+  }
+  @media screen and (max-width: 800px) {
+    #container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .search {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 520px) {
+    #container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 350px) {
+    #container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
